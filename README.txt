@@ -4,9 +4,9 @@ Welcome to the Inze project.
 This is a application that's being constructed, so some things are very "manual", for now.
 
 
-*************************************************************************************************************************************************************
-*                                   THIS APPLICATION, AT THIS MOMENT, JUST WORKS FOR NUBANK'S INVOICES!                                                     *
-*************************************************************************************************************************************************************
+*****************************************************************************************************************************
+*                                   THIS APPLICATION, AT THIS MOMENT, JUST WORKS FOR NUBANK'S INVOICES!                     *
+*****************************************************************************************************************************
 
 To run the application:
 
@@ -17,13 +17,13 @@ The seccond step is to install all the project dependencies. To do this run the 
     $ pip (or pip3) install flask
     $ pip install flask_cors
 
-============================================================================================================================================================
-!!          IMPORTANT:                                                                                                                                    !!
-!!              THIS APPLICATION AND IT'S INSTALLATION SEQUENCE IS TOTALLY VALID TO THE LINUX BASED OS. FOR OTHERS, THIS STEPS WOULD BE DIFFERENT         !!
-!!              (DEPPENDING OF HOW YOU'VE PREPARED YOUR DEVELOPMENT ENVIRONMENT TOO)                                                                          !!
-!!          TIP:                                                                                                                                          !!
-!!              AS A GOOD PRATICE, I RECOMMEND YOU TO INSTALL ALL THIS PACKAGES USING A VIRTUAL ENVIRONMENT;                                              !!
-============================================================================================================================================================
+=============================================================================================================================
+!!          IMPORTANT:                                                                                                     !!
+!!              THIS APPLICATION AND IT'S INSTALLATION SEQUENCE IS TOTALLY VALID TO THE LINUX BASED OS. FOR OTHERS, THIS   !!  !!              STEPS WOULD BE DIFFERENT                                                                                   !!
+!!              (DEPPENDING OF HOW YOU'VE PREPARED YOUR DEVELOPMENT ENVIRONMENT TOO)                                       !!
+!!          TIP:                                                                                                           !!
+!!              AS A GOOD PRATICE, I RECOMMEND YOU TO INSTALL ALL THIS PACKAGES USING A VIRTUAL ENVIRONMENT.               !!
+=============================================================================================================================
 
 After install all the dependencies, you must run the api using the following command:
     $ python csv_api.py
