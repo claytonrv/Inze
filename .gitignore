@@ -1,0 +1,6 @@
+model/__pycache__/
+service/__pycache__/
+util/__pycache__/
+
+*.csv
+*.json
