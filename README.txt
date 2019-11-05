@@ -19,7 +19,8 @@ The seccond step is to install all the project dependencies. To do this run the 
 
 =============================================================================================================================
 !!          IMPORTANT:                                                                                                     !!
-!!              THIS APPLICATION AND IT'S INSTALLATION SEQUENCE IS TOTALLY VALID TO THE LINUX BASED OS. FOR OTHERS, THIS   !!  !!              STEPS WOULD BE DIFFERENT                                                                                   !!
+!!              THIS APPLICATION AND IT'S INSTALLATION SEQUENCE IS TOTALLY VALID TO THE LINUX BASED OS. FOR OTHERS, THIS   !!
+!!              STEPS WOULD BE DIFFERENT                                                                                   !!
 !!              (DEPPENDING OF HOW YOU'VE PREPARED YOUR DEVELOPMENT ENVIRONMENT TOO)                                       !!
 !!          TIP:                                                                                                           !!
 !!              AS A GOOD PRATICE, I RECOMMEND YOU TO INSTALL ALL THIS PACKAGES USING A VIRTUAL ENVIRONMENT.               !!
