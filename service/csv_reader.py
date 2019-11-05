@@ -20,18 +20,13 @@ class CSVReader():
                         category = row[1]
                         store = row[2]
                         amount = row[3]
-                        try:
-                            bar_index = []
-                            [bar_index.append(m.start()) for m in re.finditer('/', store)]
-                            installment_amount = None
-                            installment = None
-                            for index in bar_index:
-                                if store[index+1].isdigit():
-                                    installment_amount = int(store[index+1:])
-                                    installment = int(store[index-2:index].strip())
-                        except:
-                            installment_amount = None
-                            installment = None
+                        installment_amount = None
+                        installment = None
+                        match = re.search('\d+/\d+', store)
+                        # print(match.group())
+                        if match:
+                            installment_amount = match.group().split('/')[1]
+                            installment = match.group().split('/')[0]
                         record = CreditCardRecord(year=year, month=month, day=day, amount=amount, category=category, store=store, installment_amount=installment_amount, installment=installment)
                         self.record_list.append(record.toJSON())
                         line_count += 1
@@ -43,3 +38,7 @@ class CSVReader():
 
     def get_record_list(self):
         return self.record_list
+
+
+
+        '^[^0-9]\\[^0-9]$'
