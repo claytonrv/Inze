@@ -1,6 +1,8 @@
 model/__pycache__/
 service/__pycache__/
 util/__pycache__/
+translator/__pycache__/
+tests/__pycache__/
 
 *.csv
 *.json

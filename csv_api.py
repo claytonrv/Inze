@@ -1,7 +1,8 @@
+# coding: utf-8
 from flask import Flask, request
 from flask_cors import CORS
 from service import CSVReader
-from util import RecordTranslator
+from translation import RecordTranslator
 import os, random, string, json
 
 ALLOWED_EXTENSIONS = {'csv'}
@@ -37,7 +38,7 @@ def upload_folder():
                 os.makedirs(directory)
             file.save(file_path)
     record_list = process_folder(directory)
-    return translator.translate_record_list(record_list)
+    return translator.translate_record_list_to_json_list(record_list)
 
 def process_file(file_path):
     return csvReader.process_csv_data_by_file(file_path)

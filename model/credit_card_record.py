@@ -1,3 +1,4 @@
+# coding: utf-8
 import json
 
 class CreditCardRecord:
@@ -47,8 +48,17 @@ class CreditCardRecord:
     def set_store(self, store):
         self.store = store
 
-    def to_string(self):
-        return "Ano: "+self.year +" | Mês: "+ self.month +" | Dia: "+ self.day +" | Montante: "+ self.amount +" | Categoria: "+ self.category +" | Loja:"+self.store
+    def get_installment_amount(self):
+        return self.installment_amount
 
-    def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
+    def set_installment_amount(self, installment_amount):
+        self.installment_amount = installment_amount
+
+    def get_installment(self):
+        return self.installment
+
+    def set_installment(self, installment):
+        self.installment = installment
+
+    def to_string(self):
+        return "Ano: "+self.year +" | Mês: "+ self.month +" | Dia: "+ self.day +" | Montante: "+ self.amount +" | Categoria: "+ self.category +" | Loja:"+self.store + " | Parcelamento: "+self.installment_amount + " | Parcelas pagas: "+self.installment 
