@@ -1,3 +1,4 @@
+# coding: utf-8
 import unittest, sys, json
 sys.path.append('../')
 from translation import RecordTranslator

@@ -27,6 +27,7 @@ def process_csv_files(uploaded_files, directory):
             save_csv_files_locally(file, directory)
     list_of_record_json = transform_files_in_folder(directory)
     record_json_list = translator.translate_record_list_to_json_list(list_of_record_json)
+    return record_json_list
 
 def save_csv_files_locally(file, directory):
     filename = file.filename
