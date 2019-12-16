@@ -29,12 +29,14 @@ class CreditCardRecordTest(unittest.TestCase):
     def test_transform_csv_files_into_json_by_folder(self):
         csv_path = self.csv_util.init_csv_file_path()
         expected_result = self.csv_util.init_list_csv_json()
-        self.assertEqual(expected_result, self.csv_handler.transform_csv_files_into_json_by_folder(csv_path))
+        returned_result = self.csv_handler.transform_csv_files_into_json_by_folder(csv_path)
+        self.assertEqual(expected_result, returned_result)
 
     def test_transform_csv_files_into_json_by_folder(self):
         csv_path = self.csv_util.init_valid_csv_file_path()
         expected_result = self.csv_util.init_list_csv_json()
-        self.assertEqual(expected_result, self.csv_handler.transform_csv_files_into_json_by_folder(csv_path))
+        returned_result = self.csv_handler.transform_csv_files_into_json_by_folder(csv_path)
+        self.assertEqual(expected_result, returned_result)
 
     def test_transform_empty_csv_files_into_json_by_folder(self):
         csv_path = self.csv_util.init_empty_csv_file_path()

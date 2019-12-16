@@ -10,13 +10,13 @@ class CSVUtil:
 
     def init_valid_csv_json(self):
         return ('{\n'
-                '    "amount": "15.9", \n' 
-                '    "category": "outros", \n'
-                '    "day": "19", \n' 
-                '    "installment": null, \n' 
-                '    "installment_amount": null, \n' 
-                '    "month": "09", \n' 
-                '    "store": "Paypal *Uber", \n'
+                '    "amount": "15.9",\n' 
+                '    "category": "outros",\n'
+                '    "day": "19",\n' 
+                '    "installment": null,\n' 
+                '    "installment_amount": null,\n' 
+                '    "month": "09",\n' 
+                '    "store": "Paypal *Uber",\n'
                 '    "year": "2019"\n'
             '}')
 
@@ -25,13 +25,13 @@ class CSVUtil:
 
     def init_invalid_csv_json(self):
         return ('{\n'
-                '    "amount": null, \n' 
-                '    "category": null, \n'
-                '    "day": null, \n' 
-                '    "installment": null, \n' 
-                '    "installment_amount": null, \n' 
-                '    "month": null, \n' 
-                '    "store": null, \n'
+                '    "amount": null,\n' 
+                '    "category": null,\n'
+                '    "day": null,\n' 
+                '    "installment": null,\n' 
+                '    "installment_amount": null,\n' 
+                '    "month": null,\n' 
+                '    "store": null,\n'
                 '    "year": null\n'
             '}')
 
@@ -40,60 +40,60 @@ class CSVUtil:
     
     def init_empty_csv_json(self):
         return ('{\n'
-                '    "amount": null, \n' 
-                '    "category": null, \n'
-                '    "day": null, \n' 
-                '    "installment": null, \n' 
-                '    "installment_amount": null, \n' 
-                '    "month": null, \n' 
-                '    "store": null, \n'
+                '    "amount": null,\n' 
+                '    "category": null,\n'
+                '    "day": null,\n' 
+                '    "installment": null,\n' 
+                '    "installment_amount": null,\n' 
+                '    "month": null,\n' 
+                '    "store": null,\n'
                 '    "year": null\n'
             '}')
     
     def init_list_csv_json(self):
         return [('{\n'
-                '    "amount": "108.49", \n' 
-                '    "category": "eletrônicos", \n'
-                '    "day": "03", \n' 
-                '    "installment": "2", \n' 
-                '    "installment_amount": "10", \n' 
-                '    "month": "09", \n' 
-                '    "store": "Amazon-Marketplace 2/10", \n'
+                '    "amount": "108.49",\n' 
+                '    "category": "eletrônicos",\n'
+                '    "day": "03",\n' 
+                '    "installment": "2",\n' 
+                '    "installment_amount": "10",\n' 
+                '    "month": "09",\n' 
+                '    "store": "Amazon-Marketplace 2/10",\n'
                 '    "year": "2019"\n'
                 '}'),
                 ('{\n'
-                '    "amount": "27.9", \n' 
-                '    "category": "restaurante", \n'
-                '    "day": "03", \n' 
-                '    "installment": null, \n' 
-                '    "installment_amount": null, \n' 
-                '    "month": "09", \n' 
-                '    "store": "Burger King", \n'
+                '    "amount": "27.9",\n' 
+                '    "category": "restaurante",\n'
+                '    "day": "03",\n' 
+                '    "installment": null,\n' 
+                '    "installment_amount": null,\n' 
+                '    "month": "09",\n' 
+                '    "store": "Burger King",\n'
                 '    "year": "2019"\n'
                 '}'),
                 ('{\n'
-                '    "amount": "26.9", \n' 
-                '    "category": "outros", \n'
-                '    "day": "14", \n' 
-                '    "installment": null, \n' 
-                '    "installment_amount": null, \n' 
-                '    "month": "09", \n' 
-                '    "store": "Ebanx *Spotify", \n'
+                '    "amount": "26.9",\n' 
+                '    "category": "outros",\n'
+                '    "day": "14",\n' 
+                '    "installment": null,\n' 
+                '    "installment_amount": null,\n' 
+                '    "month": "09",\n' 
+                '    "store": "Ebanx *Spotify",\n'
                 '    "year": "2019"\n'
                 '}'),
                 ('{\n'
-                '    "amount": "15.9", \n' 
-                '    "category": "outros", \n'
-                '    "day": "19", \n' 
-                '    "installment": null, \n' 
-                '    "installment_amount": null, \n' 
-                '    "month": "09", \n' 
-                '    "store": "Paypal *Uber", \n'
+                '    "amount": "15.9",\n' 
+                '    "category": "outros",\n'
+                '    "day": "19",\n' 
+                '    "installment": null,\n' 
+                '    "installment_amount": null,\n' 
+                '    "month": "09",\n' 
+                '    "store": "Paypal *Uber",\n'
                 '    "year": "2019"\n'
                 '}')]
 
     def init_valid_csv_file_path(self):
-        return "./resource/valid/"
+        return "tests/resource/valid/"
 
     def init_empty_csv_file_path(self):
-        return "./resource/empty/"
+        return "tests/resource/empty/"
