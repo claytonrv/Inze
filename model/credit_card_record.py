@@ -6,7 +6,7 @@ class CreditCardRecord:
         self.year=year
         self.month=month
         self.day=day
-        self.amount=amount
+        self.amount=float(amount) if (amount is not None and amount != "") else 0.0
         self.category=category
         self.store=store
         self.installment_amount=installment_amount
@@ -62,3 +62,18 @@ class CreditCardRecord:
 
     def to_string(self):
         return "Ano: "+self.year +" | Mês: "+ self.month +" | Dia: "+ self.day +" | Montante: "+ self.amount +" | Categoria: "+ self.category +" | Loja:"+self.store + " | Parcelamento: "+self.installment_amount + " | Parcelas pagas: "+self.installment 
+
+    def to_dict(self):
+        if self.year is not None and self.month is not None and self.day is not None and self.category is not None and self.store is not None:
+            return {
+                'year': self.year,
+                'month': self.month,
+                'day': self.day,
+                'amount': self.amount,
+                'category': self.category,
+                'store': self.store,
+                'installment_amount': self.installment_amount,
+                'installment': self.installment
+            }
+        else:
+            return None

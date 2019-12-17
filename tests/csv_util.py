@@ -10,7 +10,7 @@ class CSVUtil:
 
     def init_valid_csv_json(self):
         return ('{\n'
-                '    "amount": "15.9",\n' 
+                '    "amount": 15.9,\n' 
                 '    "category": "outros",\n'
                 '    "day": "19",\n' 
                 '    "installment": null,\n' 
@@ -25,7 +25,7 @@ class CSVUtil:
 
     def init_invalid_csv_json(self):
         return ('{\n'
-                '    "amount": null,\n' 
+                '    "amount": 0.0,\n' 
                 '    "category": null,\n'
                 '    "day": null,\n' 
                 '    "installment": null,\n' 
@@ -40,7 +40,7 @@ class CSVUtil:
     
     def init_empty_csv_json(self):
         return ('{\n'
-                '    "amount": null,\n' 
+                '    "amount": 0.0,\n' 
                 '    "category": null,\n'
                 '    "day": null,\n' 
                 '    "installment": null,\n' 
@@ -52,7 +52,7 @@ class CSVUtil:
     
     def init_list_csv_json(self):
         return [('{\n'
-                '    "amount": "108.49",\n' 
+                '    "amount": 108.49,\n' 
                 '    "category": "eletrônicos",\n'
                 '    "day": "03",\n' 
                 '    "installment": "2",\n' 
@@ -62,7 +62,7 @@ class CSVUtil:
                 '    "year": "2019"\n'
                 '}'),
                 ('{\n'
-                '    "amount": "27.9",\n' 
+                '    "amount": 27.9,\n' 
                 '    "category": "restaurante",\n'
                 '    "day": "03",\n' 
                 '    "installment": null,\n' 
@@ -72,7 +72,7 @@ class CSVUtil:
                 '    "year": "2019"\n'
                 '}'),
                 ('{\n'
-                '    "amount": "26.9",\n' 
+                '    "amount": 26.9,\n' 
                 '    "category": "outros",\n'
                 '    "day": "14",\n' 
                 '    "installment": null,\n' 
@@ -82,7 +82,7 @@ class CSVUtil:
                 '    "year": "2019"\n'
                 '}'),
                 ('{\n'
-                '    "amount": "15.9",\n' 
+                '    "amount": 15.9,\n' 
                 '    "category": "outros",\n'
                 '    "day": "19",\n' 
                 '    "installment": null,\n' 

@@ -3,6 +3,7 @@ service/__pycache__/
 util/__pycache__/
 translation/__pycache__/
 tests/__pycache__/
+statistics/__pycache__/
 static/
 static/*.csv
 

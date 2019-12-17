@@ -18,6 +18,12 @@ class RecordUtil():
         record2 = CreditCardRecord(year="2019", month="11", day="10", amount="72.40", category="alimentação", store="Bistek Supermercados", installment_amount=None, installment=None)
         record3 = CreditCardRecord(year="2019", month="11", day="11", amount="21.15", category="saúde", store="Preço popular farmácias", installment_amount="2", installment="1")
         return [record1, record2, record3]
+    
+    def initNoAmountRecordList(self):
+        record1 = CreditCardRecord(year="2019", month="11", day="09", amount="0.0", category="eletrônicos", store="Havan Loja de Deptos", installment_amount="3", installment="2")
+        record2 = CreditCardRecord(year="2019", month="11", day="10", amount="0.0", category="alimentação", store="Bistek Supermercados", installment_amount=None, installment=None)
+        record3 = CreditCardRecord(year="2019", month="11", day="11", amount="0.0", category="saúde", store="Preço popular farmácias", installment_amount="2", installment="1")
+        return [record1, record2, record3]
 
     def initInvalidRecord(self):
         return CreditCardRecord(year=None, month=None, day=None, amount=None, category=None, store=None, installment_amount=None, installment=None)
@@ -39,7 +45,7 @@ class RecordUtil():
 
     def initRecordJson(self):
         return ('{\n'
-                '    "amount": "271.24",\n' 
+                '    "amount": 271.24,\n' 
                 '    "category": "eletrônicos",\n'
                 '    "day": "03",\n' 
                 '    "installment": "2",\n' 
@@ -51,7 +57,7 @@ class RecordUtil():
 
     def initRecordJsonList(self):
         json_list = ('[{\n'
-                '    "amount": "271.24",\n' 
+                '    "amount": 271.24,\n' 
                 '    "category": "eletrônicos",\n'
                 '    "day": "09",\n' 
                 '    "installment": "2",\n' 
@@ -60,7 +66,7 @@ class RecordUtil():
                 '    "store": "Havan Loja de Deptos",\n'
                 '    "year": "2019"\n'
             '},{\n'
-                '    "amount": "72.40",\n' 
+                '    "amount": 72.4,\n' 
                 '    "category": "alimentação",\n' 
                 '    "day": "10",\n' 
                 '    "installment": null,\n' 
@@ -69,7 +75,7 @@ class RecordUtil():
                 '    "store": "Bistek Supermercados",\n' 
                 '    "year": "2019"\n'
             '},{\n'
-                '    "amount": "21.15",\n' 
+                '    "amount": 21.15,\n' 
                 '    "category": "saúde",\n' 
                 '    "day": "11",\n' 
                 '    "installment": "1",\n' 
@@ -82,7 +88,7 @@ class RecordUtil():
 
     def initInvalidRecordJson(self):
         return json.dumps({
-            "amount": None,
+            "amount": 0.0,
             "category": None,
             "day": None,
             "installment": None,
@@ -95,7 +101,7 @@ class RecordUtil():
     def initInvalidRecordJsonList(self):
         return json.dumps([
             {
-                "amount": None,
+                "amount": 0.0,
                 "category": None,
                 "day": None,
                 "installment": None,
@@ -105,7 +111,7 @@ class RecordUtil():
                 "year": None
             },
             {
-                "amount": None,
+                "amount": 0.0,
                 "category": None,
                 "day": None,
                 "installment": None,
@@ -115,7 +121,7 @@ class RecordUtil():
                 "year": None
             },
             {
-                "amount": None,
+                "amount": 0.0,
                 "category": None,
                 "day": None,
                 "installment": None,
@@ -128,7 +134,7 @@ class RecordUtil():
 
     def initEmptyRecordJson(self):
         return json.dumps({
-            "amount": "",
+            "amount": 0.0,
             "category": "",
             "day": "",
             "installment": "",
@@ -141,7 +147,7 @@ class RecordUtil():
     def initEmptyRecordJsonList(self):
         return json.dumps([
             {
-            "amount": "",
+            "amount": 0.0,
             "category": "",
             "day": "",
             "installment": "",
@@ -151,7 +157,7 @@ class RecordUtil():
             "year": ""
             },
             {
-            "amount": "",
+            "amount": 0.0,
             "category": "",
             "day": "",
             "installment": "",
@@ -161,7 +167,7 @@ class RecordUtil():
             "year": ""
             },
             {
-            "amount": "",
+            "amount": 0.0,
             "category": "",
             "day": "",
             "installment": "",
