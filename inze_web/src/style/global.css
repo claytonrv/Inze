@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: #FFF;
+    background: darkslateblue;
+    font-family: Ubuntu;
+  }
+    
+  button {
+    position: relative;
+    right: 2vw;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 auto;
+    line-height: 50px;
+    transition: .5s;
+  }
+
+  button:hover{
+    background-color: white;
+    color: orange;
+  }
