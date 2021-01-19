@@ -10,14 +10,12 @@ export default function InvoiceJsonResultsTable(props:any){
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>amount</th>
-                    <th>category</th>
-                    <th>day</th>
-                    <th>month</th>
-                    <th>year</th>
-                    <th>store</th>
-                    <th>installment</th>
-                    <th>installment_amount</th>
+                    <th>Spent Amount</th>
+                    <th>Purchase category</th>
+                    <th>Purchase date</th>
+                    <th>Purchase Location</th>
+                    <th>Installment</th>
+                    <th>Installments number</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,9 +26,7 @@ export default function InvoiceJsonResultsTable(props:any){
                             <td>{ index+1 }</td>
                             <td>{ invoice.amount} </td>
                             <td>{ invoice.category ? invoice.category : "-"} </td>
-                            <td>{ invoice.day} </td>
-                            <td>{ invoice.month} </td>
-                            <td>{ invoice.year} </td>
+                            <td>{ invoice.date} </td>
                             <td>{ invoice.store ? invoice.store : "-"} </td>
                             <td>{ invoice.installment_payment ? invoice.installment_payment : "-"} </td>
                             <td>{ invoice.installment_total ? invoice.installment_total : "-"} </td>
