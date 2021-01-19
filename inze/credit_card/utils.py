@@ -15,14 +15,16 @@ class RecordTranslator():
         record['file'] = file_name
         record['date'] = datetime.strptime(fields[0], "%Y-%m-%d").date()
         record['category'] = fields[1]
-        record['store'] = fields[2]
         record['amount'] = fields[3]
-        match = re.search('\d+/\d+', record['store'])
+        match = re.search('\d+/\d+', fields[2])
         if match:
+            instalment_payment = match.group().split('/')[0]
             record['installment_total'] = int(match.group().split('/')[1])
-            record['installment_payment'] = int(match.group().split('/')[0])
+            record['installment_payment'] = int(instalment_payment)
+            record['store'] = fields[2].split(instalment_payment)[0]
         else:
             record['installment_total'] = 0
             record['installment_payment'] = 0
+            record['store'] = fields[2]
         record['user'] = user.id
         return record

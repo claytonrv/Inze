@@ -5,9 +5,7 @@ from django.contrib.auth.models import User
 from credit_card.models import CreditCardRecord, CreditCardBillFile
 
 class CreditCardRecordListSerializer(serializers.ModelSerializer):
-    day = serializers.SerializerMethodField()
-    month = serializers.SerializerMethodField()
-    year = serializers.SerializerMethodField()
+    date = serializers.DateField(format="%Y-%m-%d")
     amount = serializers.DecimalField(max_digits=10, decimal_places=2)
     category = serializers.CharField(allow_blank=True)
     store = serializers.CharField(allow_blank=True)
@@ -18,16 +16,7 @@ class CreditCardRecordListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CreditCardRecord
-        fields = ("id", "day", "month", "year", "amount", "category", "store", "installment_total", "installment_payment", "user", "file")
-
-    def get_day(self, record):
-        return record.date.day
-
-    def get_month(self, record):
-        return record.date.month
-
-    def get_year(self, record):
-        return record.date.year
+        fields = ("id", "date", "amount", "category", "store", "installment_total", "installment_payment", "user", "file")
 
 
 class CreditCardRecordSerializer(serializers.ModelSerializer):
