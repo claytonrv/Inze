@@ -34,16 +34,13 @@ The seccond step is to install all the project dependencies. To do this run the 
 
 # To run the application:
 
-After install all the dependencies, you must run the api using the following command:
+After install all the dependencies, you must run the api first and then the front-end, using the following command:
 ```bash
-    $ python csv_api.py
-    #or
-    $ python3 csv_api.py
+    python inze/manage.py runserver #To start the API.
+    cd inze_web && yarnn start #To start the user interface.
 ```
+The API runs on the port 8000 and the frontend runs at port 3000.
 
-This will start a flask web api on the 8082 port. That's necessary for the UI can access the application.
+That's two commands will start the django application that works as the application API and a react APP that works as the front-end.
 
-The last step is to open the "ui/index.html" folder to get access to a csv upload page. It's allowed to select every kind of file, but the system just will 
-process csv files.
-
-When you input your CSV files, the application, at this moment, just return to you a JSON array with your data processed. 
+Once you input your CSV files, the application, for now, will just list all the spents ordered by date (desc) on a table
