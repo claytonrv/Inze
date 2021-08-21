@@ -3,7 +3,7 @@ import axios from 'axios';
 const API = axios.create({
     baseURL: 'http://localhost:8000',
     headers:{
-        'Authorization': 'Token 607a5644cc8fec6f6cd0c83daaf8555546c1a194'
+        'Authorization': 'Token 7a9f1def25c69d5a1f24863a071b119e545b52ca'
     },
 });
 
