@@ -38,3 +38,6 @@ static/*.csv
 
 *.json
 *.pyc
+
+.python-version
+.eslintcache

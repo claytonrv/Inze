@@ -31,7 +31,7 @@ export default function CSVUploader () {
         })
         console.log(nameList)
         API.get('/credit-card-records', {params:{
-            file__in:nameList
+            files:nameList
         }}).then((creditCardRecords:any) => {
             setInvoiceResult({"invoiceRecords": creditCardRecords.data})
             setInvoiceNameList(nameList)

@@ -10,12 +10,12 @@ export default function InvoiceJsonResultsTable(props:any){
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Spent Amount</th>
-                    <th>Purchase category</th>
-                    <th>Purchase date</th>
-                    <th>Purchase Location</th>
-                    <th>Installment</th>
-                    <th>Installments number</th>
+                    <th>Valor gasto</th>
+                    <th>Categoria de compra</th>
+                    <th>Data da compra</th>
+                    <th>Local da compra</th>
+                    <th>Parcelas</th>
+                    <th>Numero da parcela atual</th>
                 </tr>
             </thead>
             <tbody>
