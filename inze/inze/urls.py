@@ -10,25 +10,34 @@ from credit_card.views import CreditCardRecordViewset, CreditCardBillsUploadView
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'is_staff']
+        fields = ["url", "username", "email", "is_staff"]
+
 
 # ViewSets define the view behavior.
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
+
 # Routers provide an easy way of automatically determining the URL conf.
 router = routers.SimpleRouter()
-router.register(r'users', UserViewSet)
-router.register(r'credit-card-records', CreditCardRecordViewset, basename="credit-card-records")
-#router.register(r'bill-upload', CreditCardBillsUploadView, basename='credit-card-bills-upload')
+router.register(r"users", UserViewSet)
+router.register(
+    r"credit-card-records", CreditCardRecordViewset, basename="credit-card-records"
+)
+# router.register(r'bill-upload', CreditCardBillsUploadView, basename='credit-card-bills-upload')
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
-    url('', include(router.urls)),
+    url("", include(router.urls)),
     url(r"__admin__/", admin.site.urls),
-    url('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url('api-token-auth', views.obtain_auth_token),
-    url('bill-upload', CreditCardBillsUploadView.as_view())
+    url("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+    url("api-token-auth", views.obtain_auth_token, name="token"),
+    url("bill-upload", CreditCardBillsUploadView.as_view()),
+    url(
+        "credit-card-records",
+        CreditCardRecordViewset.as_view({"get": "list"}),
+        name="cc-records",
+    ),
 ]

@@ -9,22 +9,26 @@ from django.contrib.auth.models import User
 
 from credit_card.models import CreditCardRecord
 
-class UserFactory(factory.Factory):
+
+class UserFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = User
 
-    username = "jeff.belson"
-    first_name = "Jeff"
-    last_name = "Sumo Belson"
-    email = "jeff.belson@example.com"
+    username = factory.Sequence(lambda n: "user_%d" % n)
+    first_name = factory.Sequence(lambda n: "Agent %03d" % n)
+    last_name = factory.Sequence(lambda n: "Agent %03d" % n)
+    email = factory.LazyAttribute(
+        lambda a: "{}.{}@example.com".format(a.first_name, a.last_name).lower()
+    )
+    password = "my_password"
 
 
-class CreditCardRecordFactory(factory.Factory):
+class CreditCardRecordFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = CreditCardRecord
-    
+
     date = date(2015, 7, 31)
-    amount =  Decimal(random.randrange(1, 257))/100
+    amount = Decimal(random.randrange(1, 257)) / 100
     category = "saúde"
     store = factory.Faker("company")
     installment_total = 2

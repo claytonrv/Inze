@@ -1,11 +1,11 @@
 # Welcome to the Inze project.
 ###
 
-Inze was idealized to help people to understand and follow up their spents with credit cards.
-Throught a csv version of invoices, the idea is to classify and organize your spents to let you know, how much, how often and where you're spending your money.
-Using charts and graphs the application will show you how you spents are changing during the time and what is the things you've most spent money by the time.
+Inze was idealized to be a helper to understand and follow up spents with credit cards.
+Using a csv version of invoices, the idea is to classify and organize your spents, and show their behaviors during the time to bring up, how much, how often and where money is being spent.
+Using charts and graphs the application shows how the spents are changing during the time and what is the most spent categories where the money is going to.
 
->*This application is being constructed, so some things are very "manual", for now. **AND AT THIS MOMENT, JUST WORKS FOR NUBANK'S INVOICES!***
+>*This application is being constructed, so some things are quite "manual", for now. **Currently it only works for Nubank's invoices***
 
 <br />
 <br />
@@ -13,31 +13,24 @@ Using charts and graphs the application will show you how you spents are changin
 
 # To install the application dependencies:
 
-First of all, make sure that the "static" folder, has permissions of read and write, on your OS. These folder is where the application will save the uploaded csv.
-
-The seccond step is to install all the project dependencies. To do this run the following commands on terminal:
+First step is to install all the project dependencies. To do this run the following commands on terminal:
     
 ```bash
-    $ pip (or pip3) install -r requirements.txt
+    $ pip install -r inze/requirements.txt
+
+    $ cd inze_web && yarn install
 ```
 
-
-#### **IMPORTANT:** 
-> THIS APPLICATION AND ITS INSTALLATION ARE FULL TESTED ON LINUX BASED OS. FOR OTHERS, THIS STEPS COULD BE DIFFERENT (DEPPENDING OF HOW YOU'VE PREPARED YOUR DEVELOPMENT ENVIRONMENT TOO).
-#### **TIP:** 
-> AS A GOOD PRATICE, I RECOMMEND YOU TO INSTALL ALL THIS PACKAGES USING A VIRTUAL ENVIRONMENT.
-
-
 <br />
 <br />
 <br />
 
-# To run the application:
+# To run the application locally:
 
-After install all the dependencies, you must run the api first and then the front-end, using the following command:
+After install all the dependencies, you must run the api first and then the front-end, using the following commands:
 ```bash
     python inze/manage.py runserver #To start the API.
-    cd inze_web && yarnn start #To start the user interface.
+    cd inze_web && yarn start #To start the user interface.
 ```
 The API runs on the port 8000 and the frontend runs at port 3000.
 
