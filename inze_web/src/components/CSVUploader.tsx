@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
+
 import InvoiceJsonResultsTable from './InvoiceJsonResultsTable';
 
 import API from '../services/api';
@@ -8,6 +10,7 @@ import API from '../services/api';
 import '../style/components/CSVUploader.css';
 
 export default function CSVUploader () {
+    const { t } = useTranslation();
     axios.defaults.baseURL = 'http//localhost:8000';
     const [invoiceFiles, setInvoiceFiles] = useState([])
     const [invoiceResult, setInvoiceResult] = useState({"invoiceRecords": []});
@@ -29,7 +32,6 @@ export default function CSVUploader () {
             }
             nameList += (","+fileName)
         })
-        console.log(nameList)
         API.get('/credit-card-records', {params:{
             files:nameList
         }}).then((creditCardRecords:any) => {
@@ -72,11 +74,11 @@ export default function CSVUploader () {
     return (
         <div className="upload-content">
             <div id='upload'>
-                <label htmlFor="file_upload">Selecionar arquivos</label>
+                <label htmlFor="file_upload">{t('app.selectFilesButton')}</label>
                 <input type="file" id="file_upload" multiple={true} onChange={handleFilesChange} />
-                <span>{invoiceFiles.length} arquivos selecionados</span>
+                <span>{invoiceFiles.length} {t("app.selectedFiles")}</span>
                 <button onClick={handleFilesUpload}>
-                    Processar arquivos
+                    {t("app.processButton")}
                 </button>
             </div>
             {invoiceResult && (<InvoiceJsonResultsTable {...invoiceResult} />)}

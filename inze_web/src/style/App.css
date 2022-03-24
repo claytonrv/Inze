@@ -1,20 +1,20 @@
 .content {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
 }
 
-.page-title{
-    font-family: Ubuntu;
-    font-size: 80px;
-    text-align: center;
-    text-shadow: 2px 2px rebeccapurple;
+.page-title {
+  font-family: Ubuntu;
+  font-size: 80px;
+  text-align: center;
+  text-shadow: 2px 2px rebeccapurple;
 }
 
 .subtitle {
-    text-align: center;
-    position: relative;
-    height: 6vh;
-    line-height: 8vh;
+  text-align: center;
+  position: relative;
+  height: 6vh;
+  line-height: 8vh;
 }

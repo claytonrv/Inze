@@ -4,18 +4,20 @@ import PropTypes from 'prop-types';
 
 import '../style/components/InvoiceResultsTable.css'
 
+import { useTranslation } from 'react-i18next';
+
 export default function InvoiceJsonResultsTable(props:any){
+    const { t } = useTranslation();
     return (
         <table className="styled-table">
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Valor gasto</th>
-                    <th>Categoria de compra</th>
-                    <th>Data da compra</th>
-                    <th>Local da compra</th>
-                    <th>Parcelas</th>
-                    <th>Numero da parcela atual</th>
+                    <th>{t('tableHeader.spentValue')}</th>
+                    <th>{t('tableHeader.spentCategory')}</th>
+                    <th>{t('tableHeader.spentDate')}</th>
+                    <th>{t('tableHeader.spentLocation')}</th>
+                    <th>{t('tableHeader.spentInstallment')}</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,12 +26,11 @@ export default function InvoiceJsonResultsTable(props:any){
                     return (
                         <tr key={index}>
                             <td>{ index+1 }</td>
-                            <td>{ invoice.amount} </td>
+                            <td>{ t('tableBody.spentCurrency', {amount: invoice.amount})} </td>
                             <td>{ invoice.category ? invoice.category : "-"} </td>
-                            <td>{ invoice.date} </td>
+                            <td>{ t('tableBody.spentDate', {date: new Date(invoice.date)})} </td>
                             <td>{ invoice.store ? invoice.store : "-"} </td>
-                            <td>{ invoice.installment_payment ? invoice.installment_payment : "-"} </td>
-                            <td>{ invoice.installment_total ? invoice.installment_total : "-"} </td>
+                            <td>{ invoice.installment_payment ? invoice.installment_payment+"/" : ""}{ invoice.installment_total ? invoice.installment_total : ""} </td>
                         </tr>
                         )
                     })
